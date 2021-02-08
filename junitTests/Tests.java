@@ -2,6 +2,8 @@ package junitTests;
 
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+
 import org.junit.Test;
 
 import customArray.CustomArrayOfInts;
@@ -41,19 +43,19 @@ public class Tests {
 		assertEquals(result, cs.toString());
 	}
 	
-//	@Test
-//	public void GetSliceTest() {
-//		CustomArrayOfInts cs=new CustomArrayOfInts();
-//		cs.add(11);
-//		cs.add(22);
-//		cs.add(33);
-//		cs.add(44);
-//		int[] slice=cs.getSlice(1, 2);
-//		String result= "[22,33]";
-//		
-//		assertEquals(result, slice.toString());
-//		
-//	}
+	@Test
+	public void GetSliceTest() {
+		CustomArrayOfInts cs=new CustomArrayOfInts();
+		cs.add(11);
+		cs.add(22);
+		cs.add(33);
+		cs.add(44);
+		int[] slice=cs.getSlice(1, 2);
+		String result= "[22, 33]";
+		String newSlice=Arrays.toString(slice);
+		assertEquals(result,newSlice );
+		
+	}
 	
 
 }

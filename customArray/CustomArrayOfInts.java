@@ -26,7 +26,7 @@ public class CustomArrayOfInts {
 		size++;
 		}
 	public void deleteByIndex(int index) { 
-		if(index>size)
+		if(index>size||index<0)
 			 throw new IndexOutOfBoundsException();
 		int[] temparray=new int[size];
 		int j=0;
@@ -70,7 +70,7 @@ public class CustomArrayOfInts {
 			}
 		
 		return false;
-		
+	}
 		
 		
 
@@ -122,11 +122,11 @@ public class CustomArrayOfInts {
 		if(end>size){
 			throw new IndexOutOfBoundsException();
 		}
-		int j=0;
-		for(int i=startIdx;i<end;i++) {
-			result[j]=data[i];
-			j++;
+		
+		for(int i=0;i<end-startIdx;i++) {
+			result[i]=data[i+startIdx];
 		}
+		
 		return result;
 		
 	} // may throw IndexOutOfBoundsException
