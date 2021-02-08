@@ -73,25 +73,7 @@ public class CustomArrayOfInts {
 		
 		
 		
-		
-//		boolean check=false;
-//		if(data[size-1]==value) {
-//			size--;
-//			return true;
-//		}
-//		for(int i=0;i<size;i++) {
-//			if(data[i]==value) {
-//				data[i]=data[i+1];
-//				i++;
-//				check=true;
-//			}				
-//		}
-//		if(check) {
-//			size--;
-//			return true;
-//		}
-//		return false;
-	} // delete first value matching, true if value found, false otherwise
+
 	
 	public void insertValueAtIndex(int value, int index) { 
 		int[] temparray=new int[size];
